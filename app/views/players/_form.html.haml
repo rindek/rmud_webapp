@@ -1,5 +1,7 @@
 = simple_form_for @player do |f|
   = f.input :name
+  = f.input :password, as: :password
+  
   = f.simple_fields_for :entry do |e|
     = e.input :mianownik
     = e.input :dopelniacz
