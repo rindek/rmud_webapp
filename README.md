@@ -6,5 +6,5 @@ webapp application for rmud
 mvp
 ===========
 
-* create account
-* create players with declension (proper gender)
+* ~~create account~~
+* ~~create players with declension (proper gender)~~
