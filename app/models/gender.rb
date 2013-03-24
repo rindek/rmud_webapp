@@ -1,4 +1,6 @@
-class Gender < ActiveRecord::Base
+class Gender
+  include Mongoid::Document
+  
   self.table_name = "gender"
 
   PL_MESKI_OS           = 1

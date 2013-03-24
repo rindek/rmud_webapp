@@ -1,4 +1,6 @@
-class Player < ActiveRecord::Base
+class Player
+  include Mongoid::Document
+  
   attr_accessible :name, :account_id, :dictionary_id
 
   validates_presence_of :name

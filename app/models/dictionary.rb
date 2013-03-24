@@ -1,4 +1,6 @@
-class Dictionary < ActiveRecord::Base
+class Dictionary
+  include Mongoid::Document
+  
   self.table_name = "dictionary"
 
   attr_accessible :nominative, :genitive, :dative, :accusative, :instrumental, :locative,
