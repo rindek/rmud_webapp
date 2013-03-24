@@ -3,17 +3,15 @@ class PlayersController < ApplicationController
 
   def new
     @player = Player.new
-    @player.build_dictionary
   end
 
   def create
-    d = Dictionary.create(params[:player][:dictionary])
-    if d
-      p = Player.new(params[:player].except(:dictionary))
-      p.dictionary = d
-      p.account = current_account
-      p.save
-      redirect_to :root
+    @player = Player.new(params[:player])
+    @player.account = current_account
+    if @player.save
+      redirect_to accounts_my_path
+    else
+      render :new
     end
   end
 end

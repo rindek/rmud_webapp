@@ -1,12 +1,15 @@
 class Player
   include Mongoid::Document
-  
-  attr_accessible :name, :account_id, :dictionary_id
+  include Mongoid::Timestamps
 
-  validates_presence_of :name
+  field :name, type: String
+  belongs_to :account
+  has_one :entry, autobuild: true
+
+  attr_accessible :name, :entry_attributes
+
+  validates_presence_of :name, :entry, :account
   validates_uniqueness_of :name
 
-  belongs_to :account
-  belongs_to :dictionary
-
+  accepts_nested_attributes_for :entry
 end

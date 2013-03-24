@@ -7,4 +7,6 @@
     = csrf_meta_tags
 
   %body
+    - if signed_in?
+      = link_to "wyloguj", destroy_account_session_path, method: :delete
     = yield

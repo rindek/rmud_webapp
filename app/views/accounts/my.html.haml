@@ -1,4 +1,4 @@
-Moje konto
+Moje konto (#{current_account.email})
 
 %br
 
@@ -10,7 +10,7 @@ Moje konto
       %td Imię
       %td Utworzono
   %tbody
-    - @players.each do |player|
+    - players.each do |player|
       %tr
         %td= player.name
         %td= player.created_at
