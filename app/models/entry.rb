@@ -5,6 +5,14 @@ class Entry
   belongs_to :player, inverse_of: nil
 
   PLAYER_TYPES = {"meski" => :mo, "zenski" => :z}
+  TYPES        = {
+    "meski osobowy" => :mo, 
+    "meski nieosobowy zywy" => :mnz,
+    "meski nieosobowy niezywy" => :mnn,
+    "zenski" => :z,
+    "nijaki osobowy" => :no,
+    "nijaki nieosobowy" => :nn
+  }
 
   field :mianownik, type: String
   field :dopelniacz, type: String

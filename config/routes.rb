@@ -4,6 +4,7 @@ RmudWebapp::Application.routes.draw do
 
 
   resources :players
+  resources :entries
 
   root to: "accounts#my"
 end

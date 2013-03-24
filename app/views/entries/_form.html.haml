@@ -1,0 +1,15 @@
+= simple_form_for entry do |f|
+  = f.input :mianownik
+  = f.input :dopelniacz
+  = f.input :celownik
+  = f.input :biernik
+  = f.input :narzednik
+  = f.input :miejscownik
+  = f.input :rodzaj, as: :select, :collection => Entry::TYPES, include_blank: false
+  = f.input :mmianownik
+  = f.input :mdopelniacz
+  = f.input :mcelownik
+  = f.input :mbiernik
+  = f.input :mnarzednik
+  = f.input :mmiejscownik
+  = f.submit

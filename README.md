@@ -8,3 +8,4 @@ mvp
 
 * ~~create account~~
 * ~~create players with declension (proper gender)~~
+* ~~add declension entries~~

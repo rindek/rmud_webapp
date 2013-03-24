@@ -1,0 +1,7 @@
+%h2 Entries
+
+%ul
+  - entries.each do |e|
+    %li= e.mianownik
+
+= link_to "dodaj nowy", new_entry_path
