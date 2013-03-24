@@ -17,6 +17,5 @@ gem 'pry'
 gem 'devise'
 gem 'haml'
 gem 'simple_form'
-gem 'squeel'
 gem "twitter-bootstrap-rails"
 gem 'mongoid'
